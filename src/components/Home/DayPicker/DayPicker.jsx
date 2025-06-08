@@ -30,7 +30,7 @@ function DayPicker() {
 
             <div className="sm:hidden dropdown dropdown-bottom">
                 <div tabIndex={0} role="button" className="btn m-1">
-                    {selectedDay || "Válassz napot"}
+                    {days[selectedDay-1] || "Válassz napot"}
                 </div>
                 <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
                     {days.map((day, index) => (
@@ -38,7 +38,7 @@ function DayPicker() {
                             <button
                                 className={day === selectedDay ? "btn btn-success w-full" : "btn btn-outline w-full"}
                                 onClick={() => handleSelect(index+1)}>
-                                {days[selectedDay-1]}
+                                {days[index]}
                             </button>
                         </li>
                     ))}
