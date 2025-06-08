@@ -1,3 +1,4 @@
+```
 Sulyok Dávid
 FBQFSE
 Kliensoldali webprogramozás - beadandó
@@ -7,35 +8,43 @@ származó megoldásokat. Nem továbbítottam megoldást hallgatótársaimnak, �
 Az Eötvös Loránd Tudományegyetem Hallgatói Követelményrendszere
 (ELTE szervezeti és működési szabályzata, II. Kötet, 74/C. §) kimondja, hogy mindaddig,
 amíg egy hallgató egy másik hallgató munkáját - vagy legalábbis annak jelentős részét -
-saját munkájájaként mutatja be, az fegyelmi vétségnek számít.
+saját munkájaként mutatja be, az fegyelmi vétségnek számít.
 A fegyelmi vétség legsúlyosabb következménye a hallgató elbocsátása az egyetemről.
+```
 
-- [x] Az alkalmazás legalább 4 komponensből áll. (Enélkül a beadandót nem fogadjuk el.) (1pt)
-Tehát léteznek például a következő komponensek:  
-  - Film kártya komponens
-  - Jegytípus választó komponens
-  - Helykiválasztó komponens
-  - Foglalás összesítő komponens
-- [x] Az alkalmazásban a komponenseket logikusan, funkciók szerint szétbontva hozta létre, ügyelve a tárgyon elsajátított alapelvekre. (2pt)
-- [x] Film kártyák és vetítések
-  - [x] A mai nap vetített filmek összes adatai megjelennek a kártyákon (3pt)
-  - [x] A napok között tudunk navigálni és a napot kiválasztva az adott napon vetített filmek jelennek meg (1pt)
-  - [x] A vetítések időpontjai megjelennek a kártyákon (1pt)
-  - [x] A vetítések közül választhatunk, a választott vetítés adatai megjelennek az oldal megfelelő részén (2pt)
-- [x] Jegytípusok
-  - [x] A különböző jegytípusok megjelennek és kiválaszthatjuk, hogy melyik jegytípusból hányat szeretnénk vásárolni, a különböző áraik megjelennek (2pt)
-- [x] Helykiválasztás
-  - [x] A moziterem ülésrendjének megjelenítése (2pt)
-  - [x] A foglalt helyek nem kiválaszthatóak, ez jelezve van a felhasználónak (2pt)
-  - [x] A teremben a székek kijelölhetőek, megfelelően eltárolódik (3pt)
-  - [x] Annyi helyet tudunk kiválasztani, ahány jegyet kiválasztottunk (1pt)
-  - [x] Kezelve van, hogy mi történik ha több jegyet akarunk kiválasztani (előről kezdődik a kijelölési folyamat, vagy nem enged többet kijelölni) (2pt)
-- [x] Foglalás összesítése
-  - [x] A foglalás részletei megjelennek, a kiválasztott vetítés adatai, a kiválasztott jegytípusok, a kiválaszott helyek, és a jegyek árainak összegzése (1pt)
-  - [x] A foglalás módosítása közben az összesítő folyamatosan frissül (3pt)
-  - [x] A foglalás véglegesítésével eltárolódnak a foglalás adatai, megint nem tudunk ugyanezekre a helyekre foglalni a vetítésen (2pt)
--[x] Igényes, reszponzív, mobilra optimalizált megjelenés (3pt)
+## Pontozás
 
-- Plusz pontok:
-  -[ ] LocalStorage: A foglalás adatait LocalStorage-ba mentjük. Ha már létezik foglalás, az automatikusan betöltődik. Ehhez készíts egy saját Hook-ot, amivel a LocalStorage-ba el tudod menteni az értékeket. (3 pont)
-  -[ ] Felugró ablak: Készíts egy felugró ablakot (Modal), amivel a foglalás véglegesítését tudjuk megjeleníteni! (2 pont)
+- [x] React használata (kötelező)
+- [x] Redux használata (kötelező)
+- [x] README.md fájl kitöltve
+- [x] Moziműsor: A filmek és vetítések megfelelően jelennek meg az API-ból lekérve (2pt)
+- [x] Moziműsor: Hetek között lépkedni tudunk, látjuk a dátumokat (2pt)
+- [x] Felhasználókezelés: Regisztráció működik (1pt)
+- [x] Felhasználókezelés: Bejelentkezés működik (1pt)
+- [x] Navigáció: Navigáció megfelelően változik a be- és kijelentkezésnek megfelelően, bejelentkezés után a felhasználó neve megjelenik az oldalon (2pt)
+- [x] Navigáció: Az oldal kezeli, hogy felhasználóként vagy adminisztrátorként jelentkezünk be, más-más navigációt jelenít meg (1pt)
+- [x] Felhasználókezelés: Kijelentkezés működik (1pt)
+- [ ] Jegyfoglalás: A foglalt helyekre a REST API-ból lekérve foglalni már nem tudunk (2pt)
+- [x] Jegyfoglalás: A felhasználó által vásárolt jegyek a REST API-ban mentésre kerülnek (2pt)
+- [x] Jegyfoglalás: A felhasználó kap visszajelzést kap a sikeres/sikertelen foglalásról. (1pt)
+- [ ] Jegyeim oldal: A felhasználó jegyei megjelennek a profilján (2pt)
+- [x] Admin funkciók: Film hozzáadása működik (2pt)
+- [x] Admin funkciók: Vetítés hozzáadása működik (2pt)
+- [x] Admin funkciók: Film szerkesztése működik (1pt)
+- [x] Admin funkciók: Vetítés szerkesztése működik (1pt)
+- [x] Admin funkciók: Film és vetítés törlése működik (1pt)
+- [x] Admin funkciók: A filmek és vetítések módosításának és törlésének sikerességéről az admin visszajelzést kap (2pt)
+- [x] Mobilbarát reszponzív megjelenés, mobilnézetben is jól használható az oldal (2pt)
+
+Összesen: 30 pont (Minimum: 12 pont)
+
+### Plusz feladatok (+5 pont)
+
+- [ ] Sötét/világos mód: Az oldalon tudunk váltani sötét/világos módra (2pt)
+- [ ] Modal ablakok: Az admin felületen a vetítések hozzáadása és szerkesztése modal ablakban történik (1pt)
+- [x] Toastok: Az alkalmazás toast üzenetekkel jelzi a következő műveleteket (2pt):
+  - Sikeres/sikertelen bejelentkezés
+  - Sikeres kijelentkezés
+  - Sikeres/sikertelen jegyfoglalás
+  - Sikeres/sikertelen film hozzáadás/szerkesztés/törlés
+  - Sikeres/sikertelen vetítés hozzáadás/szerkesztés/törlés
