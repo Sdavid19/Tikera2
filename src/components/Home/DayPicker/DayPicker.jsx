@@ -38,7 +38,7 @@ function DayPicker() {
                             <button
                                 className={day === selectedDay ? "btn btn-success w-full" : "btn btn-outline w-full"}
                                 onClick={() => handleSelect(index+1)}>
-                                {day}
+                                {days[selectedDay-1]}
                             </button>
                         </li>
                     ))}
