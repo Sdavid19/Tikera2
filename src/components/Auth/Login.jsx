@@ -19,7 +19,7 @@ function Login() {
       toast.success("Successfully logged in!")
       navigate('/');
     } catch (error) {
-      toast.success("Error logging in!")
+      toast.error("Error logging in!")
       setErrorMsg('Error logging in!');
       console.error(error);
     }

@@ -25,6 +25,7 @@ function Signup() {
       navigate('/login');
     } catch (error) {
       const apiError = error?.data;
+      toast.error("Error signing up!")
       setErrorMsg(apiError?.message || 'Error signing up!');
       setFieldErrors(apiError?.errors || {});
     }
