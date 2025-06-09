@@ -13,13 +13,11 @@ function MovieDetails() {
     const user = useSelector(selectUser);
     const navigate = useNavigate();
     const [deleteMovie] = useDeleteMovieMutation();
-    const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 
   const screenings = [...selectedMovie.screenings]
     .filter(x => x.week_day === selectedDay)
     .sort((a, b) => a.start_time.localeCompare(b.start_time));
   
-  console.log(screenings)
   
   const handleDayClick = (screening) => {
         const seatNum = screening.room.rows * screening.room.seatsPerRow;
