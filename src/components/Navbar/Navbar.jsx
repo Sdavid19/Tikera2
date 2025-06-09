@@ -22,13 +22,11 @@ function Navbar() {
         
         {user && user.role === "admin" && (
           <>
-            {/* Large screen horizontal menu */}
             <ul className="menu menu-horizontal px-1 hidden lg:flex">
               <li><Link to="/admin/addMovie" className="rounded-btn">Add movie</Link></li>
               <li><Link to="/admin/addScreening" className="rounded-btn">Add screening</Link></li>
             </ul>
 
-            {/* Small screen dropdown */}
             <div className="dropdown lg:hidden">
               <div tabIndex={0} role="button" className="btn btn-ghost">
                 Admin
