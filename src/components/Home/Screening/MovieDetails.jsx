@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { selectSelectedMovie, setSelectedMovie, setSelectedScreening } from "../../../redux/movieSlice";
+import { selectSelectedDay, selectSelectedMovie, setSelectedMovie, setSelectedScreening } from "../../../redux/movieSlice";
 import { selectUser } from "../../../redux/authSlice";
 import { useNavigate } from "react-router-dom";
 import { useDeleteMovieMutation } from "../../../services/movieApi";
@@ -8,13 +8,18 @@ import toast from "react-hot-toast";
 function MovieDetails() {
     const dispatch = useDispatch();
     const selectedMovie = useSelector(selectSelectedMovie);
+    const selectedDay = useSelector(selectSelectedDay);
     const selectedScreening = useSelector(state => state.movieScreening.selectedScreeningId);
     const user = useSelector(selectUser);
     const navigate = useNavigate();
     const [deleteMovie] = useDeleteMovieMutation();
+    const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 
   const screenings = [...selectedMovie.screenings]
+    .filter(x => x.week_day === selectedDay)
     .sort((a, b) => a.start_time.localeCompare(b.start_time));
+  
+  console.log(screenings)
   
   const handleDayClick = (screening) => {
         const seatNum = screening.room.rows * screening.room.seatsPerRow;
