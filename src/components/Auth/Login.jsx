@@ -28,7 +28,7 @@ function Login() {
   return (
     <div className="p-5 grid place-items-center mt-5" style={{ height: '60vh' }}>
       <h1 className="text-4xl text-center">Login</h1>
-      <form onSubmit={handleSubmit} className="grid gap-10 place-items-center">
+      <form onSubmit={handleSubmit} className="grid gap-10 place-items-center w-full max-w-sm">
         <input
           type="text"
           placeholder="Email"
