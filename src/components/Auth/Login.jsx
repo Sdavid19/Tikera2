@@ -27,7 +27,7 @@ function Login() {
 
   return (
     <div className="p-5 grid place-items-center mt-5" style={{ height: '60vh' }}>
-      <h1 className="text-4xl text-center" style={{ lineHeight: 0 }}>Login</h1>
+      <h1 className="text-4xl text-center">Login</h1>
       <form onSubmit={handleSubmit} className="grid gap-10 place-items-center">
         <input
           type="text"
