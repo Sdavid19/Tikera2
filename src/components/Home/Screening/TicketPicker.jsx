@@ -15,7 +15,7 @@ function TicketPicker() {
   const totalPrice = ticketOptions.reduce((sum, t) => sum + t.tickerNum * t.price, 0);
 
   return (
-    <div className="flex flex-col md:grid-cols-1 md:w-60 h-72 gap-10 py-5 md:py-0">
+    <div className="flex flex-col md:grid-cols-1 md:w-60 h-80 gap-10 py-5 md:py-0">
       <div className="grid md:h-40 lg:h-36">
         {ticketOptions.map((ticket, index) => (
           <div key={index} className="flex justify-between items-center">
