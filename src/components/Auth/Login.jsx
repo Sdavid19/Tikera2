@@ -32,14 +32,14 @@ function Login() {
         <input
           type="text"
           placeholder="Email"
-          className="input bg-white text-black w-100"
+          className="input bg-white text-black w-full"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
         <input
           type="password"
           placeholder="Password"
-          className="input bg-white text-black w-100"
+          className="input bg-white text-black w-full"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
